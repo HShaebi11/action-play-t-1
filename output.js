@@ -1,4 +1,3 @@
-import * as THREE from 'https://unpkg.com/three@0.155.0/build/three.module.js';
 const OUTPUT_PEER_ID = 'three-output-001'; // <-- set this and remember it
 const mount = document.getElementById('three-render');
 
