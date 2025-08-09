@@ -23,7 +23,7 @@ mount.appendChild(renderer.domElement);
 
 // Object
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x44aa88 });
+const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
