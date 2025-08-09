@@ -35,7 +35,6 @@ function animate() {
   cube.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
-animate();
 
 // --- PeerJS (host) ---
 const peer = new Peer(OUTPUT_PEER_ID);
