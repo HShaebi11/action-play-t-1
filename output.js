@@ -1,6 +1,4 @@
 import * as THREE from 'https://unpkg.com/three@0.155.0/build/three.module.js';
-import Peer from 'https://esm.sh/peerjs@1.5.2?target=es2020';
-
 const OUTPUT_PEER_ID = 'three-output-001'; // <-- set this and remember it
 const mount = document.getElementById('three-render');
 
