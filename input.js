@@ -1,5 +1,3 @@
-import Peer from 'https://esm.sh/peerjs@1.5.2?target=es2020';
-
 const TARGET_ID = 'three-output-001'; // must match output page
 
 const sx = document.getElementById("position-x");
