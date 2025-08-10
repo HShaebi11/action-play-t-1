@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if ('x' in msg) cube.position.x = Number(msg.x) || 0;
         if ('y' in msg) cube.position.y = Number(msg.y) || 0;
         if ('z' in msg) cube.position.z = Number(msg.z) || 0;
+        if ('rx' in msg) cube.rotation.x = Number(msg.rx) || 0;
+        if ('ry' in msg) cube.rotation.y = Number(msg.ry) || 0;
+        if ('rz' in msg) cube.rotation.z = Number(msg.rz) || 0;
       }
     });
     conn.on('close', () => { statusEl.textContent = 'OUTPUT: connection closed'; });

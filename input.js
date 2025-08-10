@@ -1,14 +1,22 @@
+import Peer from 'https://esm.sh/peerjs@1.5.2?target=es2020';
+
 const TARGET_ID = 'three-output-001'; // must match output page
 
 const sx = document.getElementById("position-x");
 const sy = document.getElementById("position-y");
 const sz = document.getElementById("position-z");
+const srx = document.getElementById("rotation-x");
+const sry = document.getElementById("rotation-y");
+const srz = document.getElementById("rotation-z");
 
 function getValues() {
     return {
         x: Number(sx?.value ?? 0),
         y: Number(sy?.value ?? 0),
         z: Number(sz?.value ?? 0),
+        rx: Number(srx?.value ?? 0),
+        ry: Number(sry?.value ?? 0),
+        rz: Number(srz?.value ?? 0),
     };
 }
 
@@ -46,6 +54,12 @@ function queueSend() {
 }
 
 [sx, sy, sz].forEach(el => {
+    el?.addEventListener('input', queueSend);
+    el?.addEventListener('change', queueSend);
+});
+
+// Add rotation knob event listeners
+[srx, sry, srz].forEach(el => {
     el?.addEventListener('input', queueSend);
     el?.addEventListener('change', queueSend);
 });
